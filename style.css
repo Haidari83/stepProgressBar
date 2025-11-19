@@ -1,0 +1,144 @@
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style */
+body{
+	font-family: 'B nazanin';
+	font-weight: 600;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.step__container{
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+	margin: 100px auto;
+	max-width: 1136px;
+	padding:0 34px 0 34px;
+}
+.step__wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	flex-shrink: 0;
+	justify-content: center;
+	width: 52px;
+}
+.step__icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	background-color: #F5F5F5;
+}
+.step__icon svg{
+	width: 24px;
+	height: 24px;
+	color: #C7C7C7;
+}
+.step__text{
+	color: #C7C7C7;
+	white-space: nowrap;
+}
+.step__line{
+	margin-top: 26px;
+	flex-grow: 1;
+	height: 1px;
+	background-color: #EEEEEE;
+}
+
+.step--complete .step__icon{
+	background-color: #28A745;
+}
+.step--complete +.step__line{
+	background-color: #28A745;
+}
+.step--complete .step__text{
+	color: #28A745;
+}
+
+.step--complete svg{
+	color: #fff;
+}
+
+@media screen and (max-width: 600px ) {
+	.step__wrapper{
+		width: 42px;
+		row-gap: 20px;
+	}
+	.step__text{
+		font-size: 12px;
+	}	
+}
+@media screen and (max-width: 420px ) {
+	.step__container{
+		align-items: center;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+	.step__wrapper{
+		width: 52px;
+		row-gap: 20px;
+	}
+	.step__text{
+		font-size: 16px;
+	}	
+	.step__line{
+		width: 1px;
+		height: 80px;
+		margin-top: 0;
+	}
+}
